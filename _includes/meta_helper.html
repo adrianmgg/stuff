@@ -1,0 +1,11 @@
+{%- if include.content != nil -%}
+	{%- if include.name and include.property -%}
+		<meta name="{{ include.name }}" property="{{ include.property }}" content="{{ include.content }}">
+	{%- elsif include.name -%}
+		<meta name="{{ include.name }}" content="{{ include.content }}">
+	{%- elsif include.property -%}
+		<meta property="{{ include.property }}" content="{{ include.content }}">
+	{%- endif -%}
+{%- else -%}
+	<!-- <meta property="{{ include.property }}" name="{{ include.name }}" content="{{ include.content }}"> -->
+{%- endif -%}

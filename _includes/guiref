@@ -1,0 +1,10 @@
+{%- assign itemarr = include.items | split: ">" -%}
+{%- assign maxidx = itemarr | size | minus: 1 -%}
+{%- for idx in (0..maxidx) -%}
+	{{- '<kbd class="guiref">' -}}
+	{{- itemarr[idx] -}}
+	{{- "</kbd>" -}}
+	{%- if idx != maxidx -%}
+		{{- "&rarr;" -}}
+	{%- endif -%}
+{%- endfor -%}

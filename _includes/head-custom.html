@@ -1,0 +1,42 @@
+{%- if page.image -%}
+	{%- assign page_url_absolute = page.url | absolute_url -%}
+	{%- assign _image = page.image | replace: "__MY_URL__", page_url_absolute -%}
+	{%- if page.image_alt -%}
+		{%- comment -%} TODO - warning (or maybe even error?) on missing alt text {%- endcomment -%}
+		{%- assign _image_alt = page.image_alt -%}
+	{%- endif -%}
+{%- endif -%}
+
+{%- if page.title -%}
+	<title>{{ page.title }}</title>
+{%- endif -%}
+{%- include meta_helper.html property="og:title" content=page.title -%}
+
+{%- include meta_helper.html name="description" content=page.description -%}
+{%- include meta_helper.html property="og:description" content=page.description -%}
+
+{%- include meta_helper.html property="og:image" content=_image -%}
+{%- include meta_helper.html property="og:image:alt" content=_image_alt -%}
+
+
+<!-- twitter card stuff -->
+
+{%- assign twitter_site = site.twitter.username | default: page.author -%}
+{%- assign twitter_creator = page.author | default: site.twitter.username -%}
+{%- if twitter_site    -%} {%- assign twitter_site    = twitter_site    | prepend: "@" -%} {%- endif -%}
+{%- if twitter_creator -%} {%- assign twitter_creator = twitter_creator | prepend: "@" -%} {%- endif -%}
+
+{%- if _image -%}
+	{%- assign twitter_card = "summary_large_image" -%}
+{%- else -%}
+	{%- assign twitter_card = "summary" -%}
+{%- endif -%}
+
+{%- include meta_helper.html name="twitter:card" content=twitter_card -%}
+{%- include meta_helper.html name="twitter:title" content=page.title -%}
+{%- include meta_helper.html name="twitter:description" content=page.description -%}
+{%- include meta_helper.html name="twitter:site" content=twitter_site -%}
+{%- include meta_helper.html name="twitter:creator" content=twitter_creator -%}
+{%- include meta_helper.html name="twitter:image" content=_image -%}
+{%- include meta_helper.html name="twitter:image:alt" content=_image_alt -%}
+

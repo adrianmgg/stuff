@@ -1,0 +1,17 @@
+// based on jekyll-theme-minimal.scss from https://github.com/pages-themes/minimal, which is licensed under CC0-1.0
+
+body {
+	word-wrap: break-word;
+}
+
+header {
+	padding: 0;
+}
+
+header ul, header p.view {
+	position: static;
+}
+
+pre, code {
+	word-wrap: normal;
+}

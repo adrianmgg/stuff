@@ -1,0 +1,20 @@
+// based on jekyll-theme-minimal.scss from https://github.com/pages-themes/minimal, which is licensed under CC0-1.0
+
+header {
+	width: 270px;
+	float: left;
+	position: fixed;
+}
+
+footer {
+	width: 270px;
+	float: left;
+	position: fixed;
+	bottom: 50px;
+}
+
+section {
+	width: 500px;
+	float: right;
+	padding-bottom: 50px;
+}

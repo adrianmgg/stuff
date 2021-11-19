@@ -1,0 +1,26 @@
+// based on jekyll-theme-minimal.scss from https://github.com/pages-themes/minimal, which is licensed under CC0-1.0
+
+div.wrapper {
+	width: auto;
+	margin: 0;
+}
+
+header, section, footer {
+	float: none;
+	position: static;
+	width: auto;
+}
+
+header {
+	padding-right: 320px;
+}
+
+header a small {
+	display: inline;
+}
+
+header ul {
+	position: absolute;
+	right: 50px;
+	top: 52px;
+}

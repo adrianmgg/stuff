@@ -1,0 +1,12 @@
+{%- comment -%} css classes {%- endcomment -%}
+{%- capture classlist -%}
+	{% if include.inline | default: false -%}
+		{{ "inline" }}
+	{%- else -%}
+		{{ "ownline" }}
+	{%- endif %}
+{%- endcapture -%}
+{%- comment -%} remove duplicate/leading/trailing spaces {%- endcomment -%}
+{%- assign classlist = classlist | split: " " | compact | join: " " -%}
+
+<img src="{{ page.url | relative_url }}/{{ include.name }}" class="{{ classlist }}" />

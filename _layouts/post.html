@@ -1,0 +1,33 @@
+---
+layout: default
+---
+
+{%- comment -%}
+
+based on _layouts/post.html from https://github.com/pages-themes/minimal, which is licensed under CC0-1.0
+
+{%- endcomment -%}
+
+
+<small>
+	{%- if page.date -%}
+		{{- "posted " -}}
+		{{- page.date | date: "%-d %B %Y" -}}
+		{%- if page.date_modified -%}
+			{{- ", last modified " -}}
+			{{- page.date_modified | date: "%-d %B %Y" -}}
+		{%- endif -%}
+	{%- endif -%}
+</small>
+<h1>{{- page.title -}}</h1>
+
+<p class="view">by {{ page.author | default: site.author -}}</p>
+
+{{content}}
+
+{%- if page.tags -%}
+	{%- assign numtags = page.tags | size -%}
+	{%- if numtags > 0 -%}
+		<small>tags: <em>{{- page.tags | join: "</em> - <em>" -}}</em></small>
+	{%- endif -%}
+{%- endif -%}

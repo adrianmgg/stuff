@@ -1,0 +1,15 @@
+// based on jekyll-theme-minimal.scss from https://github.com/pages-themes/minimal, which is licensed under CC0-1.0
+
+body {
+	padding: 15px;
+}
+
+.downloads {
+	width: 99%;
+}
+
+.downloads li,
+
+.downloads li+li+li {
+	width: 33%;
+}

@@ -1,1 +1,22 @@
+title: stuff
+# description:
+domain: adrianmgg.github.io
+url: https://adrianmgg.github.io
+baseurl: /stuff/
+github-username: 
+
 theme: jekyll-theme-minimal
+plugins:
+
+exclude:
+# - _posts/**/*.png
+
+twitter:
+  username: amgg
+
+permalink: /:collection/:categories/:title
+#permalink: /stuff/:collection/:categories/:title
+
+collections:
+  twitch:
+    output: true
