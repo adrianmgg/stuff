@@ -20,3 +20,9 @@ permalink: /:collection/:categories/:title
 collections:
   twitch:
     output: true
+    title: Twitch
+  mc:
+    output: true
+    title: Minecraft
+
+date_format: "%-d %B %Y"

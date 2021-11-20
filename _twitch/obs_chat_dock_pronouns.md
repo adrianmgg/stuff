@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Pronouns Extension in OBS Chat Dock
-description: enabling chat pronouns addon in obs chat dock
+description: how to enable chat pronouns addon in obs chat dock
 author: amgg
 date: 2021-11-18
 # date_modified:
