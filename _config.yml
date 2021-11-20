@@ -12,7 +12,7 @@ exclude:
 # - _posts/**/*.png
 
 twitter:
-  username: amgg
+  username: amgg__
 
 permalink: /:collection/:categories/:title
 #permalink: /stuff/:collection/:categories/:title

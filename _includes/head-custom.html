@@ -21,8 +21,8 @@
 
 <!-- twitter card stuff -->
 
-{%- assign twitter_site = site.twitter.username | default: page.author -%}
-{%- assign twitter_creator = page.author | default: site.twitter.username -%}
+{%- assign twitter_site = site.twitter.username -%}
+{%- assign twitter_creator = page.twitter.username | default: site.twitter.username -%}
 {%- if twitter_site    -%} {%- assign twitter_site    = twitter_site    | prepend: "@" -%} {%- endif -%}
 {%- if twitter_creator -%} {%- assign twitter_creator = twitter_creator | prepend: "@" -%} {%- endif -%}
 
