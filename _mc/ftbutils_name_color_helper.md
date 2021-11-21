@@ -1,9 +1,10 @@
 ---
 layout: post
 title: FTBUtilities Name Color Rank Command Generator
-description: auto generate commands to give a splecific player a custom name color with ftbutilities
+description: generate commands to give a specific player a custom name color with ftbutilities
 author: amgg
 date: 2021-11-20
+date_modified: 2021-11-20
 ---
 
 <style>
