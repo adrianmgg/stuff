@@ -41,11 +41,15 @@ function updateForm() {
 	let nameColor = nameColorDropdown.value;
 	let username = usernameInput.value;
 	let rankName = `rank_for_${username.toLowerCase()}`;
-	commandsDisplay.textContent = `/ranks create ${rankName}
+	commandsDisplay.textContent = `with a rank:
+/ranks create ${rankName}
 /ranks set_permission ${rankName} power 101
 /ranks add ${username} ${rankName}
 /ranks set_permission ${rankName} ftbutilities.chat.name_format <&${colorData[nameColor].escape}{name}&r>
-/ranks set_permission ${rankName} ftbutilities.chat.text.color ${chatColor}`;
+/ranks set_permission ${rankName} ftbutilities.chat.text.color ${chatColor}
+
+with a nickname (won't change text color):
+/nick &${colorData[nameColor].escape}${username}&r`;
 	
 	previewName.style.color = colorData[nameColor].color;
 	previewName.style.setProperty('--bg-color', colorData[nameColor].bgcolor);
