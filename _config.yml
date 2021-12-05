@@ -4,6 +4,7 @@ domain: adrianmgg.github.io
 url: https://adrianmgg.github.io
 baseurl: /stuff/
 github-username: 
+repository: adrianmgg/stuff
 
 theme: jekyll-theme-minimal
 plugins:
