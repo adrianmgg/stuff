@@ -59,7 +59,7 @@ based on _layouts/default.html from https://github.com/pages-themes/minimal, whi
       </section>
       <footer>
         {%- if site.github.is_project_page -%}
-        <p class="view"><a href="{{ site.github.repository_url }}/tree/{{ site.github.source.branch }}/{{ page.path }}">view source on GitHub</a></p>
+        <p class="view"><a href="{{ site.github.repository_url }}/blob/{%- comment -%}{{ site.github.source.branch }}{%- endcomment -%}{{- "main" -}}/{{ page.path }}?plain=1">view source on GitHub</a></p>
         {%- elsif site.github.is_user_page -%}
           {%- comment -%} TODO {%- endcomment -%}
         {%- endif -%}
